@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap'
-// import { Button } from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 import { connect } from 'react-redux'
@@ -30,14 +30,14 @@ class Favourites extends Component {
                     <Col> <u>Delete from Favourites</u> </Col>
                 </Row>
                 <hr />
-                {this.props.favouriteJobs.map((job) => (
+                {this.props.favouriteJobs.map((job, index) => (
                     <Row>
                         <Col> {job.title} </Col>
                         <Col> {job.company_name} </Col>
                         <Col> {job.category} </Col>
                         <Col> {job.job_type} </Col>
                         <Col ><Link to={`/company-detail/${job.company_name}`}>{job.company_name}</Link></Col>
-                        {/* <Col ><Button onClick={this.props.removeFromFavourite(index)}>Delete</Button></Col> */}
+                        <Col ><Button onClick={() => (this.props.removeFromFavourite(index))}>Delete</Button></Col>
                         <hr />
                     </Row>
                 ))}

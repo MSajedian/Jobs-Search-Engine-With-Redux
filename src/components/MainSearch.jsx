@@ -3,7 +3,7 @@ import { Container, Row, Col, Form } from 'react-bootstrap'
 import Job from './Job'
 import uniqid from 'uniqid'
 
-export default class MainSearch extends React.Component {
+class MainSearch extends React.Component {
 
     state = {
         query: '',
@@ -34,7 +34,7 @@ export default class MainSearch extends React.Component {
             <Container>
                 <Row>
                     <Col xs={10} className='mx-auto my-3'>
-                        <h1>Remote Jobs Search</h1>
+                        <h1>Main Search</h1>
                     </Col>
                     <Col xs={10} className='mx-auto'>
                         <Form onSubmit={this.handleSubmit}>
@@ -52,3 +52,5 @@ export default class MainSearch extends React.Component {
         )
     }
 }
+
+export default MainSearch

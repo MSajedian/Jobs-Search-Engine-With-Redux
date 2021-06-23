@@ -3,15 +3,14 @@ import { Container, Row, Col, Form } from 'react-bootstrap'
 import Job from './Job'
 import uniqid from 'uniqid'
 
-class MainSearch extends React.Component {
+class SearchCompany extends React.Component {
 
     state = {
         query: '',
         jobs: []
     }
 
-    baseEndpoint = 'https://remotive.io/api/remote-jobs?search='
-
+    baseEndpoint = 'https://remotive.io/api/remote-jobs?company_name='
 
     handleSubmit = async (e) => {
         e.preventDefault()
@@ -34,7 +33,7 @@ class MainSearch extends React.Component {
             <Container>
                 <Row>
                     <Col xs={10} className='mx-auto my-3'>
-                        <h1>Main Search</h1>
+                        <h1>Search Company</h1>
                     </Col>
                     <Col xs={10} className='mx-auto'>
                         <Form onSubmit={this.handleSubmit}>
@@ -53,4 +52,4 @@ class MainSearch extends React.Component {
     }
 }
 
-export default MainSearch
+export default SearchCompany

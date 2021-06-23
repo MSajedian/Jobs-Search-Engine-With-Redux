@@ -40,6 +40,14 @@ class SearchCompany extends React.Component {
                             <Form.Control type="search" value={this.state.query} onChange={(e) => { this.setState({ query: e.target.value }) }} />
                         </Form>
                     </Col>
+                    <Col xs={10} className='mx-auto mt-2'>
+                        <Row>
+                            <Col xs={3}><b>&nbsp;&nbsp;&nbsp;Company Name</b></Col>
+                            <Col xs={3}><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Title</b></Col>
+                            <Col xs={3}><b>Show Detail</b></Col>
+                            <Col xs={3}><b>Add to Favourite</b></Col>
+                        </Row>
+                    </Col>
                     <Col xs={10} className='mx-auto mb-5'>
 
                         {

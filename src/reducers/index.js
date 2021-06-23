@@ -8,24 +8,14 @@ const mainReducer = (state = initialState, action) => {
         favouriteJobs: [...state.favouriteJobs, action.payload], // THIS IS VALID
       }
 
-    // case 'REMOVE_ITEM_FROM_CART':
-    //   let newProducts = state.cart.products.filter((book, i) => i !== action.payload)
-    //   return {
-    //     ...state,
-    //     cart: {
-    //       ...state.cart,
-    //       products: newProducts,
-    //     },
-    //   }
 
-    // case 'SET_USERNAME':
-    //   return {
-    //     ...state, // carrying over the cart, I don't want to lose it
-    //     user: {
-    //       ...state.user,
-    //       firstName: action.payload,
-    //     },
-    //   }
+    case 'REMOVE_JOB_FROM_FAVOURITE':
+      let newfavouriteJobs = state.favouriteJobs.filter((job, i) => i !== action.payload)
+      return {
+        ...state,
+        favouriteJobs: newfavouriteJobs,
+      }
+
 
     default:
       return state
